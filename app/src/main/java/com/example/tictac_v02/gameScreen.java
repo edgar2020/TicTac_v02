@@ -35,6 +35,8 @@ public class gameScreen extends AppCompatActivity {
             public void onClick(View v) {
                 if(player1Turn)
                     ((Button) findViewById(R.id.button)).setText("X");
+                else
+                    ((Button) findViewById(R.id.button)).setText("O");
             }
         });
     }
