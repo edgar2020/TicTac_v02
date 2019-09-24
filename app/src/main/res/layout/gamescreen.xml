@@ -80,7 +80,24 @@
                 android:id="@+id/button9"
                 android:layout_width="70dp"
                 android:layout_height="70dp" />
+
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/player Turn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Player _ turn" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Reset" />
+
 </LinearLayout>
