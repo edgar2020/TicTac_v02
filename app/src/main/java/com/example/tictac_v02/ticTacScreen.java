@@ -8,12 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class gameScreen extends AppCompatActivity {
+public class ticTacScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gamescreen);
+        setContentView(R.layout.activity_tic_tac_screen);
 
         final boolean player1Turn=true;
 
@@ -39,5 +39,9 @@ public class gameScreen extends AppCompatActivity {
                     ((Button) findViewById(R.id.button)).setText("O");
             }
         });
+
+
+
+
     }
 }

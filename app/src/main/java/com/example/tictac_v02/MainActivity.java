@@ -1,5 +1,6 @@
 package com.example.tictac_v02;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,21 +10,25 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-
+Button start_button;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button nextPage = (Button) findViewById(R.id.startButton); //find the button by its assigned id
 
-        Button start_button = (Button) findViewById(R.id.startButton);
-        start_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), gameScreen.class);
-                startActivityForResult(myIntent, 0);
+//Make the button do something:
+        nextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent myIntent = new Intent(MainActivity.this,
+                        ticTacScreen.class);
+                startActivity(myIntent);
+
             }
-
-        });
+        });//end of click listener
     }
-}
+    }
+
