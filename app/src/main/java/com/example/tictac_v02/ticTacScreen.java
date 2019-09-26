@@ -42,96 +42,122 @@ public class ticTacScreen extends AppCompatActivity {
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
+                    if(((Button) findViewById(R.id.button)).getText()=="") {
                         if (player1Turn)
                             ((Button) findViewById(R.id.button)).setText("X");
                         else
                             ((Button) findViewById(R.id.button)).setText("O");
 
-                        player1Turn=!player1Turn;
+                        player1Turn = !player1Turn;
                         turns++;
+                    }
 
                 }
             });
             button2.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(player1Turn)
-                        ((Button) findViewById(R.id.button2)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button2)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if(((Button) findViewById(R.id.button2)).getText()=="") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button2)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button2)).setText("O");
+
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
                 }
             });
           button3.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(player1Turn)
-                        ((Button) findViewById(R.id.button3)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button3)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if(((Button) findViewById(R.id.button3)).getText()=="") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button3)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button3)).setText("O");
+
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
                 }
             });         //row one of game
 
             button4.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if (player1Turn)
-                        ((Button) findViewById(R.id.button4)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button4)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if(((Button) findViewById(R.id.button4)).getText()=="") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button4)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button4)).setText("O");
+
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
                 }
             });
             button5.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(player1Turn)
-                        ((Button) findViewById(R.id.button5)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button5)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if (((Button) findViewById(R.id.button5)).getText() == "") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button5)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button5)).setText("O");
+
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
                 }
             });
             button6.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(player1Turn)
-                        ((Button) findViewById(R.id.button6)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button6)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if(((Button) findViewById(R.id.button6)).getText()=="") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button6)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button6)).setText("O");
+
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
                 }
             });     //2nd row
 
             button7.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if (player1Turn)
-                        ((Button) findViewById(R.id.button7)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button7)).setText("O");
-                    player1Turn=!player1Turn;
+                    if (((Button) findViewById(R.id.button7)).getText() == "") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button7)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button7)).setText("O");
+
+                    player1Turn = !player1Turn;
                     turns++;
+                }
                 }
             });
             button8.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(player1Turn)
-                        ((Button) findViewById(R.id.button8)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button8)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if(((Button) findViewById(R.id.button8)).getText()=="") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button8)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button8)).setText("O");
+
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
                 }
             });
             button9.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    if(player1Turn)
-                        ((Button) findViewById(R.id.button9)).setText("X");
-                    else
-                        ((Button) findViewById(R.id.button9)).setText("O");
-                    player1Turn=!player1Turn;
-                    turns++;
+                    if(((Button) findViewById(R.id.button9)).getText()=="") {
+                        if (player1Turn)
+                            ((Button) findViewById(R.id.button9)).setText("X");
+                        else
+                            ((Button) findViewById(R.id.button9)).setText("O");
+                        player1Turn = !player1Turn;
+                        turns++;
+                    }
+
                 }
             });//end of third class
 
