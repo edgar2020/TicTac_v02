@@ -9,11 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextClock;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 public class ticTacScreen extends AppCompatActivity {
     public boolean player1Turn=true;
+    boolean gameover=false;
+    int turns=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +48,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button)).setText("O");
 
                         player1Turn=!player1Turn;
-
-
+                        turns++;
 
                 }
             });
@@ -57,6 +59,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button2)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });
           button3.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +69,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button3)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });         //row one of game
 
@@ -76,6 +80,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button4)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });
             button5.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +90,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button5)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });
             button6.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +100,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button6)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });     //2nd row
 
@@ -104,6 +111,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button7)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });
             button8.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +121,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button8)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });
             button9.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +131,7 @@ public class ticTacScreen extends AppCompatActivity {
                     else
                         ((Button) findViewById(R.id.button9)).setText("O");
                     player1Turn=!player1Turn;
+                    turns++;
                 }
             });//end of third class
 
