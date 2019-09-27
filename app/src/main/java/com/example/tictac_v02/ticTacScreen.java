@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 public class ticTacScreen extends AppCompatActivity {
     public boolean player1Turn=true;
     boolean gameover=false;
+    Button resetButton = (Button) findViewById(R.id.reset);
 
     Button button1 = (Button) findViewById(R.id.button);
     Button button2 = (Button) findViewById(R.id.button2);
@@ -42,6 +43,16 @@ public class ticTacScreen extends AppCompatActivity {
 
         TextView playersTurn = (TextView)findViewById(R.id.playerTurn);
 
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent myIntent = new Intent(ticTacScreen.this,
+                        MainActivity.class);
+                startActivity(myIntent);
+
+            }
+        });//end of click listener
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
