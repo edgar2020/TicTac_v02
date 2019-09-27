@@ -10,9 +10,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-Button start_button;
+    Button start_button;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -22,6 +23,7 @@ Button start_button;
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // TODO Auto-generated method stub
                 Intent myIntent = new Intent(MainActivity.this,
                         ticTacScreen.class);
                 startActivity(myIntent);
@@ -29,5 +31,5 @@ Button start_button;
             }
         });//end of click listener
     }
-    }
+}
 
