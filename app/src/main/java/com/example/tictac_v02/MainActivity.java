@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button start_button;
+Button start_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, ticTacScreen.class);
+                Intent myIntent = new Intent(MainActivity.this,
+                        ticTacScreen.class);
                 startActivity(myIntent);
 
             }
         });//end of click listener
     }
-}
+    }
+
