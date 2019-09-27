@@ -17,24 +17,26 @@ public class ticTacScreen extends AppCompatActivity {
     public boolean player1Turn=true;
     boolean gameover=false;
 
-    Button button1, button2,button3,button4,button5,button6,button7,button8,button9;
+    Button button1 = (Button) findViewById(R.id.button);
+    Button button2 = (Button) findViewById(R.id.button2);
+    Button button3 = (Button) findViewById(R.id.button3);//first row
 
+    Button button4 = (Button) findViewById(R.id.button4);
+    Button button5 = (Button) findViewById(R.id.button5);
+    Button button6 = (Button) findViewById(R.id.button6);//second row
 
+    Button button7 = (Button) findViewById(R.id.button7);
+    Button button8 = (Button) findViewById(R.id.button8);
+    Button button9 = (Button) findViewById(R.id.button9);//third row
 
+    Button ticTacButtons[] = {button1, button2, button3,button4,button5,button6,button7,button8,button9};
+
+    int turns=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_screen);
 
-        button1=(Button)findViewById(R.id.button);
-        button2=(Button)findViewById(R.id.button2);
-        button3=(Button)findViewById(R.id.button3);
-        button4=(Button)findViewById(R.id.button4);
-        button5=(Button)findViewById(R.id.button5);
-        button6=(Button)findViewById(R.id.button6);
-        button7=(Button)findViewById(R.id.button7);
-        button8=(Button)findViewById(R.id.button8);
-        button9=(Button)findViewById(R.id.button9);
 
 
 
@@ -50,8 +52,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
-
+                        turns++;
                     }
 
                 }
@@ -65,7 +66,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button2)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
                 }
             });
@@ -78,7 +79,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button3)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
                 }
             });         //row one of game
@@ -92,7 +93,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button4)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
                 }
             });
@@ -105,7 +106,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button5)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
                 }
             });
@@ -118,7 +119,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button6)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
                 }
             });     //2nd row
@@ -132,7 +133,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button7)).setText("O");
 
                     player1Turn = !player1Turn;
-                        checkWin();
+                    turns++;
                 }
                 }
             });
@@ -145,7 +146,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button8)).setText("O");
 
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
                 }
             });
@@ -157,7 +158,7 @@ public class ticTacScreen extends AppCompatActivity {
                         else
                             ((Button) findViewById(R.id.button9)).setText("O");
                         player1Turn = !player1Turn;
-                        checkWin();
+                        turns++;
                     }
 
                 }
@@ -167,69 +168,68 @@ public class ticTacScreen extends AppCompatActivity {
 
     public void checkWin()
     {
-        Button ticTacButtons[] = {button1, button2, button3,button4,button5,button6,button7,button8,button9};
         if((ticTacButtons[0].getText()==ticTacButtons[1].getText())&&(ticTacButtons[0].getText()==ticTacButtons[2].getText()))
         {
             if(ticTacButtons[0].getText()=="X")
-                Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[0].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[0].getText()==ticTacButtons[4].getText())&&(ticTacButtons[0].getText()==ticTacButtons[8].getText()))
         {
             if(ticTacButtons[0].getText()=="X")
-                Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[0].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[0].getText()==ticTacButtons[3].getText())&&(ticTacButtons[0].getText()==ticTacButtons[6].getText()))
         {
             if(ticTacButtons[0].getText()=="X")
-                Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[0].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[3].getText()==ticTacButtons[4].getText())&&(ticTacButtons[3].getText()==ticTacButtons[5].getText()))
         {
             if(ticTacButtons[3].getText()=="X")
-                Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[3].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[6].getText()==ticTacButtons[7].getText())&&(ticTacButtons[6].getText()==ticTacButtons[5].getText()))
         {
             if(ticTacButtons[6].getText()=="X")
-                Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[6].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[2].getText()==ticTacButtons[5].getText())&&(ticTacButtons[2].getText()==ticTacButtons[8].getText()))
         {
             if(ticTacButtons[2].getText()=="X")
-                Toast.makeText(this, "Player 1 WIns", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[2].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[1].getText()==ticTacButtons[4].getText())&&(ticTacButtons[1].getText()==ticTacButtons[7].getText()))
         {
             if(ticTacButtons[1].getText()=="X")
-                Toast.makeText(this, "Player 1 WIns", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[1].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
 
         if((ticTacButtons[2].getText()==ticTacButtons[4].getText())&&(ticTacButtons[2].getText()==ticTacButtons[6].getText()))
         {
             if(ticTacButtons[2].getText()=="X")
-                Toast.makeText(this, "Player 1 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 1", Toast.LENGTH_LONG).show();
             if(ticTacButtons[2].getText()=="O")
-                Toast.makeText(this, "Player 2 Wins", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Player 2", Toast.LENGTH_LONG).show();
         }
     }
 }
