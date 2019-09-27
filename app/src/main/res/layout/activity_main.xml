@@ -5,51 +5,54 @@
     android:id="@+id/loadingScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADD8E6"
+    android:background="#CFD2B2"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/tittle"
-        android:layout_width="196dp"
-        android:layout_height="57dp"
-        android:layout_gravity="center"
-        android:background="#3090C7"
-        android:gravity="center"
-        android:text="Tic Tac Toe"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="15dp" />
 
     <TextView
-        android:id="@+id/credits"
-        android:layout_width="211dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/tittle"
+        android:layout_width="190dp"
+        android:layout_height="31dp"
         android:layout_gravity="center"
-        android:background="#3090C7"
+
+        android:gravity="center"
+        android:text="Tic Tac Toe"
+        android:textColor="#020202"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="190dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center"
+
         android:gravity="center"
         android:text="By Victor Dominguez and Edgar Melendrez"
+        android:textColor="#020202"
         android:textSize="10sp" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="30dp" />
 
     <TextView
         android:id="@+id/Instructions"
-        android:layout_width="match_parent"
-        android:layout_height="102dp"
+        android:layout_width="290dp"
+        android:layout_height="140dp"
         android:layout_gravity="center"
-        android:background="#3090C7"
+
         android:gravity="center"
-        android:text='Hello, welcome to our Tic Tac Toe game. In order to play simply click on the button where you wish to place your "X" or "O"'
-        android:textSize="15sp" />
+        android:text='Hello, welcome to our Tic Tac Toe game. In order to play simply click on the button where you wish to place your "X" or "O". Each player will take a turn to place their symbol. When one person is able to place 3 of their symbols symbols in a straight line in any direction they win. Press the reset Button if you wish to play again.'
+        android:textColor="#020202"
+        android:textSize="13sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -57,9 +60,10 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="match_parent"
+        android:layout_width="188dp"
         android:layout_height="wrap_content"
-        android:onClick="t"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:text="Start Game" />
 
 </LinearLayout>
