@@ -27,6 +27,7 @@ public class ticTacScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_screen);
 
+        Button resetButton = (Button) findViewById(R.id.reset);
         button1= (Button) findViewById(R.id.button);
          button2 = (Button) findViewById(R.id.button2);
          button3 = (Button) findViewById(R.id.button3);//first row
@@ -44,6 +45,16 @@ public class ticTacScreen extends AppCompatActivity {
         playersTurn = (TextView)findViewById(R.id.playerTurn);
 
 
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent myIntent = new Intent(ticTacScreen.this,
+                        MainActivity.class);
+                startActivity(myIntent);
+
+            }
+        });//end of click listener
 
             button1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
