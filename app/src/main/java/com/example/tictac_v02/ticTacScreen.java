@@ -2,34 +2,19 @@ package com.example.tictac_v02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
 
 public class ticTacScreen extends AppCompatActivity {
     public boolean player1Turn=true;
     boolean gameover=false;
 
-    Button button1 = (Button) findViewById(R.id.button);
-    Button button2 = (Button) findViewById(R.id.button2);
-    Button button3 = (Button) findViewById(R.id.button3);//first row
+    Button button1, button2, button3,button4,button5,button6,button7,button8,button9;
 
-    Button button4 = (Button) findViewById(R.id.button4);
-    Button button5 = (Button) findViewById(R.id.button5);
-    Button button6 = (Button) findViewById(R.id.button6);//second row
-
-    Button button7 = (Button) findViewById(R.id.button7);
-    Button button8 = (Button) findViewById(R.id.button8);
-    Button button9 = (Button) findViewById(R.id.button9);//third row
-
-    Button ticTacButtons[] = {button1, button2, button3,button4,button5,button6,button7,button8,button9};
 
     int turns=0;
     @Override
@@ -37,6 +22,17 @@ public class ticTacScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_screen);
 
+        button1= (Button) findViewById(R.id.button);
+         button2 = (Button) findViewById(R.id.button2);
+         button3 = (Button) findViewById(R.id.button3);//first row
+
+         button4 = (Button) findViewById(R.id.button4);
+         button5 = (Button) findViewById(R.id.button5);
+         button6 = (Button) findViewById(R.id.button6);//second row
+
+         button7 = (Button) findViewById(R.id.button7);
+         button8 = (Button) findViewById(R.id.button8);
+         button9 = (Button) findViewById(R.id.button9);//third row
 
 
 
@@ -53,6 +49,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
 
                 }
@@ -67,6 +64,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
                 }
             });
@@ -80,6 +78,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
                 }
             });         //row one of game
@@ -94,6 +93,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
                 }
             });
@@ -107,6 +107,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
                 }
             });
@@ -120,6 +121,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
                 }
             });     //2nd row
@@ -134,6 +136,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                     player1Turn = !player1Turn;
                     turns++;
+                        checkWin();
                 }
                 }
             });
@@ -147,6 +150,7 @@ public class ticTacScreen extends AppCompatActivity {
 
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
                 }
             });
@@ -159,6 +163,7 @@ public class ticTacScreen extends AppCompatActivity {
                             ((Button) findViewById(R.id.button9)).setText("O");
                         player1Turn = !player1Turn;
                         turns++;
+                        checkWin();
                     }
 
                 }
@@ -168,6 +173,7 @@ public class ticTacScreen extends AppCompatActivity {
 
     public void checkWin()
     {
+        Button ticTacButtons[] = {button1, button2, button3,button4,button5,button6,button7,button8,button9};
         if((ticTacButtons[0].getText()==ticTacButtons[1].getText())&&(ticTacButtons[0].getText()==ticTacButtons[2].getText()))
         {
             if(ticTacButtons[0].getText()=="X")
