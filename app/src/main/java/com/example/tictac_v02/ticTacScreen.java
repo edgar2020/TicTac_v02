@@ -326,8 +326,9 @@ public class ticTacScreen extends AppCompatActivity {
         }
         if(turns>8)
         {
-            restartGame();
             Toast.makeText(this, "CAT, No winner", Toast.LENGTH_LONG).show();
+            restartGame();
+
         }
     }
     public void restartGame()
