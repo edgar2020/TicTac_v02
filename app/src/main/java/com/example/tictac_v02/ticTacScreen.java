@@ -2,6 +2,7 @@ package com.example.tictac_v02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -323,9 +324,15 @@ public class ticTacScreen extends AppCompatActivity {
                 restartGame();
             }
         }
+        if(turns>8)
+        {
+            restartGame();
+            Toast.makeText(this, "CAT, No winner", Toast.LENGTH_LONG).show();
+        }
     }
     public void restartGame()
     {
+        turns=0;
         button1.setText("");
         button2.setText("");
         button3.setText("");
